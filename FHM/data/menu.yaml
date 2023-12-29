@@ -1,0 +1,8 @@
+- item: About
+  url: pages/about
+- item: New Constructions
+  url: pages/cbuilds/
+- item: Home Remodels
+  url: categories
+- item: Development
+  url: tags

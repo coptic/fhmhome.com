@@ -1,0 +1,12 @@
+[submodule "themes/gallery"]
+	path = FHM/themes/gallery
+	url = https://github.com/nicokaiser/hugo-theme-gallery
+[submodule "themes/newsroom"]
+	path = FHM/themes/newsroom
+	url = https://github.com/onweru/newsroom
+[submodule "themes/hugo-short-code-gallery"]
+	path = FHM/themes/hugo-short-code-gallery
+	url = https://github.com/mfg92/hugo-shortcode-gallery
+[submodule "FHM/themes/ananke"]
+	path = FHM/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
