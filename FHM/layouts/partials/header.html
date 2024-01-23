@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ if ne .Layout "home" }}
+      <meta name="description" content="{{ .Summary }}">
+    {{ else }}
+      <meta name="description" content="{{ $.Site.Params.description }}">
+    {{ end }}
+
+    <meta property="og:title" content="{{ .Title }}"/>
+    <meta property="og:url" content="{{ .Permalink }}"/>
+    <meta property="og:type" content="article">
+    {{ if .Params.image }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />{{ end }}
+    <meta property="og:site_name" content="{{ .Site.Title }}"/>
+    <meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ $.Site.Params.description }}{{ end }}"/>
+
+    <link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
+    <link rel="shortcut icon" sizes="196x196" href="/img/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/img/icon-192x192.png">
+    
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="stylesheet" href="/css/style.css?version={{now}}">
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+  </head>
+  <body id="top" class="{{ if .IsHome }}home{{ else }}{{ end }}{{ if .IsPage }}{{ .Section | singularize }}{{ else }}{{ .Section }}{{ end }}">
+    <div class="main">
+      {{ partial "navigation.html" . }}

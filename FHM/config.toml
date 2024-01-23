@@ -1,5 +1,90 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'FHM Home'
+baseURL = "http://www.fhmhome.com/"
+languageCode = "en-us"
+title = "FHM Home Building"
+theme = "bootstrap-theme"
+[markup.goldmark.renderer]
+unsafe= true
+[params]
+  subtitle = 'Your Dream Home Builder'
+  [params.contact]
+    email = 'fhomehomebuilding@gmail.com'
+    phone = '469-587-9550'
 
-theme = 'newsroom'
+mainSections = ["blog", "pages", "docs", "notes"]
+	
+[menu]
+
+	[[menu.main]]
+		Name = "About us"
+		URL = "#"
+		weight = 1
+	
+	[[menu.main]]
+		Name = "Services"
+		URL = "#"
+		weight = 2
+	
+	[[menu.main]]
+		Name = "New Custom Homes"
+		URL = "#"
+		weight = 3
+
+	[[menu.main]]
+		Name = "Where we build"
+		URL = "#"
+		weight = 4
+
+	[[menu.main]]
+		Name = "Home Makeover"
+		URL = "#"
+		weight = 5
+
+	[[menu.main]]
+		Name = "Office Solutions"
+		URL = "#"
+		weight = 6
+
+	[[menu.main]]
+		Name = "Galleries"
+		URL = "#"
+		weight = 7
+
+	[[menu.main]]
+		Name = "Contact Us"
+		URL = "#"
+		weight = 8	
+		
+
+languageCode = "en" # For the internal RSS template (and for the html lang attribute)
+DefaultContentLanguage = "en"
+timeZone = 'US/Chicago'
+
+# Multilingual
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+#sectionPagesMenu = "main"
+#googleAnalytics = "UA-1511XXXX-X"
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = 'series'
+  author = "authors"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[permalinks]
+#  post = "/post/:title/"
+

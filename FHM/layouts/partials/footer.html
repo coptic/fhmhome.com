@@ -1,0 +1,44 @@
+<div id="footer">
+
+    <div class="container">
+        
+        <div class="threecols">
+            {{ with .GetPage "/_index.md" }}
+                <div class="col">
+                    {{ print "<h3" (index (split .Content "<h3") 1) | safeHTML }}
+                </div>
+                <div class="col">
+                    {{ print "<h3" (index (split .Content "<h3") 2) | safeHTML }}
+                </div>
+                <div class="col">
+                    {{ print "<h3" (index (split .Content "<h3") 3) | safeHTML }}
+                </div>
+            {{ end }}
+        </div>    
+    </div>
+</div>
+
+
+<script type="text/javascript" src="/js/text-expand.js"></script>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+
+<script type="text/javascript" src="/js/carousel.js"></script>
+
+<!-- webshop -->
+<link rel="stylesheet" href="/css/webshop.css">
+<script type="text/javascript" src="/js/webshop.js"></script>
+<script type="text/javascript">
+ updateCartCount();
+</script>
+
+<link rel="stylesheet" href="/css/carousel.css">
+
+
+
+
+{{ partial "consent.html" . }}
+
+</body>
+</html>

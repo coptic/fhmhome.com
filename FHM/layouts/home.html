@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+  <div class="container">
+    <article class="post">
+      <br /><br /><img src="/img/hugo-logo.svg" alt="Hugo logo" width="752" height="205.55" />
+      {{ print (index (split .Content "</h2>") 0) "</h2>" | safeHTML }}
+    </article>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

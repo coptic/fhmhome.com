@@ -10,3 +10,9 @@
 [submodule "FHM/themes/ananke"]
 	path = FHM/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "FHM/themes/Agnes"]
+	path = FHM/themes/Agnes
+	url = https://github.com/dchucks/agnes-hugo-theme.git
+[submodule "FHM/themes/bootstrap-theme"]
+	path = FHM/themes/bootstrap-theme
+	url = https://github.com/filipecarneiro/hugo-bootstrap-theme.git
